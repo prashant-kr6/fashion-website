@@ -1,0 +1,353 @@
+<html>
+<title></title>
+<head>
+<style>
+#nav
+{
+margin:0px;
+position:fixed;
+top:0px;
+left:0px;
+width:100%;
+height:60px;
+background:transparant;
+background-color:#6666CC;
+color:white;
+font-family:arial;
+opacity:0.9;
+}
+
+
+#nav a 
+{
+color:white;
+text-decoration:none;
+}
+
+#nav a:hover
+{
+color:#FF0000;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+
+</style>
+
+
+<body bgcolor="Orange">
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="dropdown" >
+  <button class="dropbtn">Select Term</button>
+  <div class="dropdown-content">
+    <a href="result3.html">119201</a>
+    <a href="result2.html">119202</a>
+  </div>
+</div>
+</center>
+<br>
+
+
+<br>
+<br>
+<br>
+
+<h2 align="center">Student Marks View</h2>
+<table border="1" align="center">
+<tr bgcolor="blue">
+<td align="center">Course </td>
+<td align="center">Description</td>
+<td align="center">Marks Max</td>
+<td align="center">Marks Obtd</td>
+<td align="center">Weight Marks Max</td>
+<td align="center">Weight Marks Obtd</td>
+</tr>
+<tr bgcolor="yellow">
+<td>CHE110::ENVIRONMENTAL STUDIES</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>40</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>35</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>40</td>
+<td>27</td>
+<td>20</td>
+<td>14</td>
+</tr>
+<tr bgcolor="yellow">
+<td>CSE202::OBJECT ORIENTED PROGRAMMING</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>30</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>45</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>40</td>
+<td>27</td>
+<td>20</td>
+<td>14</td>
+</tr>
+<tr bgcolor="yellow">
+<td>CSE326::INTERNET PROGRAMMING LABORATORY</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>45</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Practical End Term</td>
+<td>100</td>
+<td>Awaited</td>
+<td>50</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td>ECE213::DIGITAL ELECTRONICS</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>25</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>50</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>40</td>
+<td>25</td>
+<td>20</td>
+<td>13</td>
+</tr>
+<tr>
+<td>ECE216::DIGITAL ELECTRONICS LABORATORY</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>45</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Practical End Term</td>
+<td>100</td>
+<td>Awaited</td>
+<td>50</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td>MEC107::BASIC ENGINEERING MECHANICS</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>25</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>50</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>40</td>
+<td>27</td>
+<td>20</td>
+<td>14</td>
+</tr>
+<tr bgcolor="yellow">
+<td>MTH166::DIFFERENTIAL EQUATIONS AND VECTOR CALCULUS</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>25</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>50</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>5</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>40</td>
+<td>17</td>
+<td>20</td>
+<td>9</td>
+</tr>
+<tr bgcolor="yellow">
+<td>PEL131::COMMUNICATION SKILLS-II</td>
+<td>Continuous Assesment</td>
+<td>100</td>
+<td>Awaited</td>
+<td>30</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Theory End Term</td>
+<td>70</td>
+<td>Awaited</td>
+<td>40</td>
+<td>Awaited</td>
+</tr>
+<tr bgcolor="yellow">
+<td></td>
+<td>Attendance Marks</td>
+<td>5</td>
+<td>Awaited</td>
+<td>15</td>
+<td>Awaited</td>
+</tr>
+<tr>
+<td></td>
+<td>Objective Type Mid Term</td>
+<td>50</td>
+<td>Awaited</td>
+<td>15</td>
+<td>Awaited</td>
+</tr>
+<tr>
+</body>
+</head>
+</html>
