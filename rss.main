@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>FASHION</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bootstrap.min.css">
+  <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+ 
+  <script src="jquery.min.js"></script>
+  <script src="bootstrap.min.js"></script>
+      <script>
+         function showRSS(str) {
+            if (str.length == 0) { 
+               document.getElementById("output").innerHTML = "";
+               return;
+            }
+
+            var   xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function() {
+               if (xhr.readyState == 4 && xhr.status == 200) {
+                  document.getElementById("output").innerHTML = xhr.responseText;
+               }
+            }
+            
+            xhr.open("GET","rss.php?q="+str,true);
+            xhr.send();
+         }
+		 
+		function init()
+		{
+			setTimeout(getPic,1000);
+		}
+		function getPic()
+		{
+			xhr = new XMLHttpRequest();	
+			if(xhr)
+			{
+		
+			xhr.open("GET", "images/image.txt", true);
+			xhr.onreadystatechange = showImg;
+			xhr.send(null);
+			}
+		}
+		function showImg()
+		{
+			if(xhr.readyState == 4 && xhr.status == 200)
+			{
+				var res=xhr.responseText;
+				picture=document.createElement("img");
+				picture.innerHTML=res;
+				
+				document.body.appendChild(picture);
+				
+			}
+		}
+</script>
+      
+   </head>
+   <style>
+    body
+	{
+		background-color:black;
+    }
+	
+	.log
+    {
+      width: 650px;
+      height:400px;
+      border:3px solid white;
+      margin-left:1100px;
+      margin-top:300px;
+      font-size:28px;
+    }
+	    .input{
+        height:10px;
+
+    }
+
+    .brand{
+    color: white !important;
+    font-size:33px;
+    font-family:timesNewRoman;
+    font-weight:bolder;
+    
+    float:left;
+  }
+
+  
+  .container-fluid {
+      padding: 60px 50px;
+  }
+
+ 
+  
+  .item span {
+      font-style: normal;
+  }
+
+  .navbar {
+      margin-bottom: 0;
+      background-color: rgba(0,0,0,1);
+      z-index: 9999;
+      border: 0;
+      font-size: 20px !important;
+      font-weight: 700;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: rgba(0,0,0,1) !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  input{
+    margin-left:90px;
+  }
+   h2 {
+      font-size: 40px;
+      line-height: 1.375em;
+      color: #fff;
+      font-weight: 800;
+      margin-bottom: 30px;
+  } 
+  #quote{
+  color: white; 
+  }
+  
+  #output{
+  color: white ;
+  }
+  </style>
+   
+   <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60" onload="init()">
+
+	<nav class="navbar navbar-default navbar-fixed-top">
+	  <div class="container">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>
+			<span class="icon-bar"></span>                        
+		  </button>
+		  <h1 class="brand" >FASHION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav navbar-right">
+			<li><a href="main.html">HOME</a></li>
+			<li><a href="contact_main.html">CONTACT</a></li>
+		  </ul>
+		</div>
+	  </div>
+	</nav>
+   <div class = "log">
+       <h2 align="center">NEWS</h2>
+	   <p id="quote" align="center">WHAT YOU WANT TO READ????</p>
+      <form align="center" >
+         <select id="sel" onchange = "showRSS(this.value)">
+            <option value = "Fashion">FASHION</option>
+            <option value = "Textile">TEXTILE</option>
+            <option value = "Apparel">APPAREL</option>
+         </select>
+      </form>
+      <br>
+	  <div id = "output" align="center">RSS-feeds</div>
+	  </div>
+      
+      
+      
+   </body>
+</html>
