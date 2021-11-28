@@ -1,0 +1,26 @@
+<html>
+<head>
+<style>
+.button{
+	display:block;
+	height:"300";
+	
+}
+</style>
+<script type="text/javascript">
+function redirect()
+{
+	window.location="index.html";
+}
+function logout()
+{
+	window.location="logout.php";
+}
+</script>
+</head>
+<h1 align="center">Your order has been placed successfuly</h1>
+<center>
+<input  type="button" value="continue" onclick="redirect()" />
+<input type="button" value="logout" onclick="logout()" />
+</center>
+</html>
