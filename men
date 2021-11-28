@@ -1,0 +1,477 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>MEN'S SECTION</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js"></script> 
+<!-- start top_js_button -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		function display(clicked_id)
+		{
+			var val = clicked_id;
+			xhr.onreadystatechange = function()
+			{
+				if(xhr.readyState == 4 && xhr.status == 200)
+				{
+					var count = xhr.responseText;
+					var dis = document.getElementById(val);
+					var para = document.createElement("p");
+					var text = document.createTextNode(count);
+					para.appendChild(text);
+					dis.appendChild(para);
+				}
+			}	
+			xhr.open("GET","periodicrefresh/men/men1.php?q="+val,true);
+			xhr.send();
+
+			
+		}
+		function reduceCount(clicked_id)
+		{
+			var val = clicked_id;
+			xhr.open("GET","periodicrefresh/men/men.php?q="+val,true);
+			xhr.send();
+		}	
+		function image(source,cost)
+		{
+			var src = source;
+			var cost = cost;
+			localStorage.setItem("currentImage",src);
+			localStorage.setItem("currentCost",cost);
+			window.location="details.html";
+		}
+
+	</script>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.jpg" height="150" width="300" alt=""/> </a>
+		</div>
+		<div class="h_icon">
+		<ul class="icon1 sub-icon1">
+			<li><a class="active-icon c1" href="#"><i>$300</i></a>
+				<ul class="sub-icon1 list">
+					<li><h3>Shopping Cart Empty</h3><a href=""></a></li>
+					<li><p>If Items In Your Wishlist are Missing, <a href="contact.html">Contact us</a> To view them</p></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="h_search">
+    		<form>
+    			<input type="text" value="">
+    			<input type="submit" value="">
+    		</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+<div class="header_btm">
+<div class="wrap">
+	<div class="header_sub">
+		<div class="h_menu">
+			<ul>
+				<li><a href="index.html">Home</a></li> |
+				<li><a href="sale.html">sale</a></li> |
+				<li><a href="handbags.html">handbags</a></li> |
+				<li><a href="wallets.html">wallets</a></li> |
+				<li><a href="shoes.html">shoes</a></li> |
+				<li><a href="rss.html">News</a></li> |
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</div>
+		<div class="top-nav">
+	          <nav class="nav">	        	
+	    	    <a href="#" id="w3-menu-trigger"> </a>
+	                  <ul class="nav-list" style="">
+	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
+							<li class="nav-item"><a href="sale.html">Sale</a></li>
+							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
+							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
+							<li class="nav-item"><a href="rss.html">News</a></li>
+							<li class="nav-item"><a href="contact.html">Contact</a></li>
+	                 </ul>
+	           </nav>
+	             <div class="search_box">
+				<form>
+				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+			    </form>
+			</div>
+	          <div class="clear"> </div>
+	          <script src="js/responsive.menu.js"></script>
+         </div>	
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+<!-- start main -->
+<div class="main_bg">
+<div class="wrap">	
+	<div class="main">
+		<h2 class="style top">MEN'S STORE</h2>
+		<!-- start grids_of_3 -->
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men1.jpg" height="200" onclick ="image(this.src,800)" alt=""/>
+					<div class="price">
+						<h4>Rs.800</h4>
+						<h4 id ="m1" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m1" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men2.jpg" height="200" onclick ="image(this.src,700)" alt=""/>
+					<div class="price">
+						<h4>Rs.700</h4>
+						<h4 id ="m2" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m2" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men3.jpg" height="200" onclick ="image(this.src,700)" alt=""/>
+					<div class="price">
+						<h4>Rs.700</h4>
+						<h4 id ="m3" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m3" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men4.jpg" height="200" onclick ="image(this.src,1600)" alt=""/>
+					<div class="price">
+						<h4>Rs.1600</h4>
+						<h4 id ="m4" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m4" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men5.jpg" height="200" onclick ="image(this.src,2100)" alt=""/>
+					<div class="price">
+						<h4>Rs.2100</h4>
+						<h4 id ="m5" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m5" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men6.jpg" height="200" onclick ="image(this.src,800)" alt=""/>
+					<div class="price">
+						<h4>Rs.800</h4>
+						<h4 id ="m6" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m6" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>	
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men7.jpg" height="200" onclick ="image(this.src,1200)" alt=""/>
+					<div class="price">
+						<h4>Rs.1200</h4>
+						<h4 id ="m7" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m7" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men8.jpg" height="200" onclick ="image(this.src,1500)" alt=""/>
+					<div class="price">
+						<h4>Rs.1500</h4>
+						<h4 id ="m8" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m8" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men9.jpg" height="200" onclick ="image(this.src,1800)" alt=""/>
+					<div class="price">
+						<h4>Rs.1800</h4>
+						<h4 id ="m9" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m9" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men10.jpg" height="200" onclick ="image(this.src,1200)" alt=""/>
+					<div class="price">
+						<h4>Rs.1200</h4>
+						<h4 id ="m10" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m10" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men11.jpg" height="200" onclick ="image(this.src,900)" alt=""/>
+					<div class="price">
+						<h4>Rs.900</h4>
+						<h4 id ="m11" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m11" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men12.jpg" height="200" onclick ="image(this.src,900)" alt=""/>
+					<div class="price">
+						<h4>Rs.900</h4>
+						<h4 id ="m12" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m12" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men13.jpg" height="200" onclick ="image(this.src,2000)" alt=""/>
+					<div class="price">
+						<h4>Rs.2000</h4>
+						<h4 id ="m13" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m13" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men14.jpg" height="200" onclick ="image(this.src,1700)" alt=""/>
+					<div class="price">
+						<h4>Rs.1700</h4>
+						<h4 id ="m14" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m14" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men15.jpg" height="200" onclick ="image(this.src,1500)" alt=""/>
+					<div class="price">
+						<h4>Rs.1500</h4>
+						<h4 id ="m15" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m15" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men16.jpg" height="200" onclick ="image(this.src,800)" alt=""/>
+					<div class="price">
+						<h4>Rs.800</h4>
+						<h4 id ="m16" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m16" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men17.jpg" height="200" onclick ="image(this.src,1300)" alt=""/>
+					<div class="price">
+						<h4>Rs.1300</h4>
+						<h4 id ="m17" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m17" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men18.jpg" height="200" onclick ="image(this.src,800)" alt=""/>
+					<div class="price">
+						<h4>Rs.800</h4>
+						<h4 id ="m18" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m18" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men19.jpg" height="200" onclick ="image(this.src,1300)" alt=""/>
+					<div class="price">
+						<h4>Rs.1300</h4>
+						<h4 id ="m19" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m19" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men20.jpg" height="200" onclick ="image(this.src,700)" alt=""/>
+					<div class="price">
+						<h4>Rs.700</h4>
+						<h4 id ="m20" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m20" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men21.jpg" height="200" onclick ="image(this.src,1400)" alt=""/>
+					<div class="price">
+						<h4>Rs.1400</h4>
+						<h4 id ="m21" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m21" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men22.jpg" height="200" onclick ="image(this.src,700)" alt=""/>
+					<div class="price">
+						<h4>Rs.700</h4>
+						<h4 id ="m22" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m22" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men23.jpg" height="200" onclick ="image(this.src,600)" alt=""/>
+					<div class="price">
+						<h4>Rs.600</h4>
+						<h4 id ="m23" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m23" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men24.jpg" height="200" onclick ="image(this.src,1600)" alt=""/>
+					<div class="price">
+						<h4>Rs.1600</h4>
+						<h4 id ="m24" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m24" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men25.jpg" height="200" onclick ="image(this.src,500)" alt=""/>
+					<div class="price">
+						<h4>Rs.500</h4>
+						<h4 id ="m25" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m25" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men26.jpg" height="200" onclick ="image(this.src,1100)" alt=""/>
+					<div class="price">
+						<h4>Rs.1100</h4>
+						<h4 id ="m26" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m26" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men27.jpg" height="200" onclick ="image(this.src,1200)" alt=""/>
+					<div class="price">
+						<h4>Rs.1200</h4>
+						<h4 id ="m27" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m27" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="men/men28.jpg" height="200" onclick ="image(this.src,1100)" alt=""/>
+					<div class="price">
+						<h4>Rs.1100</h4>
+						<h4 id ="m28" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m28" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men29.jpg" height="200" onclick ="image(this.src,1100)" alt=""/>
+					<div class="price">
+						<h4>Rs.1100</h4>
+						<h4 id ="m29" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m29" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="men/men30.jpg" height="200" onclick ="image(this.src,700)" alt=""/>
+					<div class="price">
+						<h4>Rs.700</h4>
+						<h4 id ="m30" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="m30" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>	
+<!-- start footer -->
+	
+<!-- start footer -->
+<div class="footer_bg1">
+<div class="wrap">
+	<div class="footer">
+		<!-- scroll_top_btn -->
+	    <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', // fading element id
+					containerHoverID: 'toTopHover', // fading element hover id
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+		<!--end scroll_top_btn -->
+		<div class="copy">
+			<p class="link">&copy;  All rights reserved | Template by&nbsp;&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>
