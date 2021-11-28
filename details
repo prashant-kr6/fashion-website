@@ -1,0 +1,286 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>The Ifashion Website  </title>
+<style>
+#float
+{
+	margin-left:1000px;
+	
+
+}
+</style>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'> 
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
+<link rel="stylesheet" type="text/css" href="css/productviewgallery.css" media="all" />
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/cloud-zoom.1.0.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-buttons.js"></script>
+<script type="text/javascript" src="js/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript" src="js/productviewgallery.js"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+</head>
+<body onload="init()">
+	<script type="text/javascript">
+		function init()
+		{
+			var val = localStorage.currentImage;
+			var cost = localStorage.currentCost;
+			document.getElementById("cost").innerHTML="Rs."+cost;
+			var zoom = document.getElementById("zoom").src;
+			document.getElementById("zoom").src=val;
+			document.getElementById("zoom").width=400;
+			document.getElementById("zoom").height=400;
+		}
+		
+	</script>
+
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.jpg" height="150" width="300" alt=""/> </a>
+		</div>
+		<div class="h_icon">
+		<ul class="icon1 sub-icon1">
+			<li><a class="active-icon c1" href="#"><i>$300</i></a>
+				<ul class="sub-icon1 list">
+					<li><h3>shopping cart empty</h3><a href=""></a></li>
+					<li><p>if items in your wishlit are missing, <a href="contact.html">contact us</a> to view them</p></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="h_search">
+    		<form>
+    			<input type="text" value="">
+    			<input type="submit" value="">
+    		</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+<div class="header_btm">
+<div class="wrap">
+	<div class="header_sub">
+		<div class="h_menu">
+			<ul>
+				<li class="active"><a href="index.html">Home</a></li> |
+				<li><a href="sale.html">sale</a></li> |
+				<li><a href="handbags.html">handbags</a></li> |
+				<li><a href="wallets.html">wallets</a></li> |
+				<li><a href="shoes.html">shoes</a></li> |
+				<li><a href="rss.html">News</a></li> |
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</div>
+		<div class="top-nav">
+	          <nav class="nav">	        	
+	    	    <a href="#" id="w3-menu-trigger"> </a>
+	                  <ul class="nav-list" style="">
+	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
+							<li class="nav-item"><a href="sale.html">Sale</a></li>
+							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
+							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
+							<li class="nav-item"><a href="rss.html">News</a></li>
+							<li class="nav-item"><a href="contact.html">Contact</a></li>
+	                 </ul>
+	           </nav>
+	             <div class="search_box">
+				<form>
+				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+			    </form>
+			</div>
+	          <div class="clear"> </div>
+	          <script src="js/responsive.menu.js"></script>
+         </div>	
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+
+<div class="main_bg">
+<div class="wrap">	
+	<div class="main">
+
+	<div class="single">
+		
+			<div class="left_content">
+			<div class="span1_of_1">
+				
+				<div class="product-view">
+				    <div class="product-essential">
+				        <div class="product-img-box">
+				    
+				    <div  class="product-image" > 
+				        
+				           	<img src="images/0001-2.jpg" id="zoom"  alt="Women Shorts" title="Women Shorts" />
+				        </a>
+				   </div>
+					
+				</div>
+				</div>
+				</div>
+				
+			</div>
+			
+			<div class="span1_of_1_des">
+				  <div class="desc1">
+					<h3>Buy This Now</h3>
+					
+					<h5 id="cost">Rs. 999</h5>
+					<div class="available">
+						
+						<div class="btn_form">
+							
+								<a href="buy.html">
+									<input type="button" value="ADD TO CART" />
+								</a>
+							
+						</div>
+						
+						<div class="clear"></div>
+					</div>
+					<div class="share-desc">
+						<div class="share">
+							<h4>Share Product :</h4>
+							<ul class="share_nav">
+								<li><a href="#"><img src="images/facebook.png" title="facebook"></a></li>
+								<li><a href="#"><img src="images/twitter.png" title="Twiiter"></a></li>
+								<li><a href="#"><img src="images/rss.png" title="Rss"></a></li>
+								<li><a href="#"><img src="images/gpluse.png" title="Google+"></a></li>
+				    		</ul>
+						</div>
+						<div class="clear"></div>
+					</div>
+			   	 </div>
+			   	</div>
+			   	
+			
+			 <div class="left_sidebar" id="float">
+					<div class="sellers">
+						
+						
+						  <div  class="banner-wrap bottom_banner color_link">
+								<a href="#" class="main_link">
+								<figure><img src="images/delivery.png" alt=""></figure>
+								<h5><span>Free Shipping</span><br> on orders over Rs999.</h5><p>This offer is valid on all our store items.</p></a>
+						 </div>
+						 
+					</div>
+				</div>
+					
+          	    <div class="clear"></div>
+	       </div>	
+	
+	</div>
+</div>
+</div>		
+
+<div class="footer_bg">
+<div class="wrap">	
+	<div class="footer">
+		
+		<div class="grids_of_4">
+			<div class="grid1_of_4">
+				<h4>featured sale</h4>
+				<ul class="f_nav">
+					<li><a href="#">alexis Hudson</a></li>
+					<li><a href="#">american apparel</a></li>
+					<li><a href="#">ben sherman</a></li>
+					<li><a href="#">big buddha</a></li>
+					<li><a href="#">channel</a></li>
+					<li><a href="#">christian audigier</a></li>
+					<li><a href="#">coach</a></li>
+					<li><a href="#">cole haan</a></li>
+				</ul>
+			</div>
+			<div class="grid1_of_4">
+				<h4>mens store</h4>
+				<ul class="f_nav">
+					<li><a href="#">alexis Hudson</a></li>
+					<li><a href="#">american apparel</a></li>
+					<li><a href="#">ben sherman</a></li>
+					<li><a href="#">big buddha</a></li>
+					<li><a href="#">channel</a></li>
+					<li><a href="#">christian audigier</a></li>
+					<li><a href="#">coach</a></li>
+					<li><a href="#">cole haan</a></li>
+				</ul>
+			</div>
+			<div class="grid1_of_4">
+				<h4>women store</h4>
+				<ul class="f_nav">
+					<li><a href="#">alexis Hudson</a></li>
+					<li><a href="#">american apparel</a></li>
+					<li><a href="#">ben sherman</a></li>
+					<li><a href="#">big buddha</a></li>
+					<li><a href="#">channel</a></li>
+					<li><a href="#">christian audigier</a></li>
+					<li><a href="#">coach</a></li>
+					<li><a href="#">cole haan</a></li>
+				</ul>
+			</div>
+			<div class="grid1_of_4">
+				<h4>quick links</h4>
+				<ul class="f_nav">
+					<li><a href="#">alexis Hudson</a></li>
+					<li><a href="#">american apparel</a></li>
+					<li><a href="#">ben sherman</a></li>
+					<li><a href="#">big buddha</a></li>
+					<li><a href="#">channel</a></li>
+					<li><a href="#">christian audigier</a></li>
+					<li><a href="#">coach</a></li>
+					<li><a href="#">cole haan</a></li>
+				</ul>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>	
+
+<div class="footer_bg1">
+<div class="wrap">
+	<div class="footer">
+		
+	    <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', 
+					containerHoverID: 'toTopHover', 
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+		
+		
+	</div>
+</div>
+</div>
+</body>
+</html>
