@@ -1,0 +1,350 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>KIDS SECTION</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet' type='text/css'>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<script src="js/jquery.min.js"></script> 
+
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+   <script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1200);
+			});
+		});
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+		var xhr = new XMLHttpRequest();
+		function display(clicked_id)
+		{
+			var val = clicked_id;
+			xhr.onreadystatechange = function()
+			{
+				if(xhr.readyState == 4 && xhr.status == 200)
+				{
+					var count = xhr.responseText;
+					var dis = document.getElementById(val);
+					var para = document.createElement("p");
+					var text = document.createTextNode(count);
+					para.appendChild(text);
+					dis.appendChild(para);
+				}
+			}	
+			xhr.open("GET","periodicrefresh/kids/kids1.php?q="+val,true);
+			xhr.send();
+
+			
+		}
+		function reduceCount(clicked_id)
+		{
+			var val = clicked_id;
+			xhr.open("GET","periodicrefresh/kids/kids.php?q="+val,true);
+			xhr.send();
+		}	
+		function image(source,cost)
+		{
+			var src = source;
+			var cost = cost;
+			localStorage.setItem("currentImage",src);
+			localStorage.setItem("currentCost",cost);
+			window.location="details.html";
+		}
+
+	</script>
+<!-- start header -->
+<div class="header_bg">
+<div class="wrap">
+	<div class="header">
+		<div class="logo">
+			<a href="index.html"><img src="images/logo.jpg" height="150" width="300" alt=""/> </a>
+		</div>
+		<div class="h_icon">
+		<ul class="icon1 sub-icon1">
+			<li><a class="active-icon c1" href="#"><i>$300</i></a>
+				<ul class="sub-icon1 list">
+					<li><h3>Shopping Cart Empty</h3><a href=""></a></li>
+					<li><p>If Items In Your Wishlist are Missing, <a href="contact.html">Contact us</a> To view them</p></li>
+				</ul>
+			</li>
+		</ul>
+		</div>
+		<div class="h_search">
+    		<form>
+    			<input type="text" value="">
+    			<input type="submit" value="">
+    		</form>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+<div class="header_btm">
+<div class="wrap">
+	<div class="header_sub">
+		<div class="h_menu">
+			<ul>
+				<li><a href="index.html">Home</a></li> |
+				<li><a href="sale.html">sale</a></li> |
+				<li><a href="handbags.html">handbags</a></li> |
+				<li><a href="wallets.html">wallets</a></li> |
+				<li><a href="shoes.html">shoes</a></li> |
+				<li><a href="rss.html">News</a></li> |
+				<li><a href="contact.html">Contact us</a></li>
+			</ul>
+		</div>
+		<div class="top-nav">
+	          <nav class="nav">	        	
+	    	    <a href="#" id="w3-menu-trigger"> </a>
+	                  <ul class="nav-list" style="">
+	            	        <li class="nav-item"><a class="active" href="index.html">Home</a></li>
+							<li class="nav-item"><a href="sale.html">Sale</a></li>
+							<li class="nav-item"><a href="handbags.html">Handbags</a></li>
+							<li class="nav-item"><a href="shoes.html">Shoes</a></li>
+							<li class="nav-item"><a href="rss.html">News</a></li>
+							<li class="nav-item"><a href="contact.html">Contact</a></li>
+	                 </ul>
+	           </nav>
+	             <div class="search_box">
+				<form>
+				   <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}"><input type="submit" value="">
+			    </form>
+			</div>
+	          <div class="clear"> </div>
+	          <script src="js/responsive.menu.js"></script>
+         </div>	
+	<div class="clear"></div>
+</div>
+</div>
+</div>
+<!-- start main -->
+<div class="main_bg">
+<div class="wrap">	
+	<div class="main">
+	<h2 class="style top">KID'S STORE</h2>
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid1.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k1" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k1" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid2.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k2" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k2" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid3.jpg" height="200" onclick ="image(this.src,599)" alt=""/>
+					<div class="price">
+						<h4>Rs.599</h4>
+						<h4 id ="k3" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k3" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid4.jpg" height="200" onclick ="image(this.src,799)" alt=""/>
+					<div class="price">
+						<h4>Rs.799</h4>
+						<h4 id ="k4" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k4" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid5.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k5" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k5" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid6.jpg" height="200" onclick ="image(this.src,499)" alt=""/>
+					<div class="price">
+						<h4>Rs.499</h4>
+						<h4 id ="k6" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k6" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>	
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid7.jpg" height="200" onclick ="image(this.src,499)" alt=""/>
+					<div class="price">
+						<h4>Rs.499</h4>
+						<h4 id ="k7" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k7" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid8.jpg" height="200" onclick ="image(this.src,499)" alt=""/>
+					<div class="price">
+						<h4>Rs.499</h4>
+						<h4 id ="k8" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k8" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid9.jpg" height="200" onclick ="image(this.src,599)" alt=""/>
+					<div class="price">
+						<h4>Rs.599</h4>
+						<h4 id ="k9" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k9" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid10.jpg" height="200" onclick ="image(this.src,599)" alt=""/>
+					<div class="price">
+						<h4>Rs.599</h4>
+						<h4 id ="k10" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k10" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid11.jpg" height="200" onclick ="image(this.src,799)" alt=""/>
+					<div class="price">
+						<h4>Rs.799</h4>
+						<h4 id ="k11" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k11" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid12.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k12" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k12" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid13.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k13" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k13" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid14.jpg" height="200" onclick ="image(this.src,799)" alt=""/>
+					<div class="price">
+						<h4>Rs.799</h4>
+						<h4 id ="k14" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k14" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid15.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k15" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k15" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+
+		<div class="grids_of_3">
+			<div class="grid1_of_3">
+					<img src="kids/kid16.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k16" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k16" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid17.jpg" height="200" onclick ="image(this.src,899)" alt=""/>
+					<div class="price">
+						<h4>Rs.899</h4>
+						<h4 id ="k17" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k17" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="grid1_of_3">
+					<img src="kids/kid18.jpg" height="200" onclick ="image(this.src,699)" alt=""/>
+					<div class="price">
+						<h4>Rs.699</h4>
+						<h4 id ="k18" onclick="display(this.id)" ><span>Number Available</span></h4>
+						<h4 id ="k18" onclick="reduceCount(this.id)" ><span>Add To Cart</span></h4>
+					</div>
+					<span class="b_btm"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>	
+
+<div class="footer_bg1">
+<div class="wrap">
+	<div class="footer">
+
+	    <script type="text/javascript">
+			$(document).ready(function() {
+			
+				var defaults = {
+		  			containerID: 'toTop', 
+					containerHoverID: 'toTopHover', 
+					scrollSpeed: 1200,
+					easingType: 'linear' 
+		 		};
+				
+				
+				$().UItoTop({ easingType: 'easeOutQuart' });
+				
+			});
+		</script>
+		 <a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a>
+
+		<div class="copy">
+			<p class="link">&copy;  All rights reserved &nbsp;&nbsp;</a></p>
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+</div>
+</body>
+</html>
